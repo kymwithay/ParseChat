@@ -14,10 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "parseChat"
@@ -25,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
                 configuration.server = "http://fierce-ocean-95885.herokuapp.com/parse"
             })
         )
+        
+        login()
         return true
     }
 
@@ -50,8 +49,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    
-
-
+    func login() {
+        if PFUser.current() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let naviVC = storyboard.instantiateViewController(withIdentifier: "homeVC") as! UINavigationController
+            
+            window?.rootViewController = naviVC
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "logInVC") as UIViewController
+            
+            window?.rootViewController = loginVC
+            
+        }
+    }
 }
 

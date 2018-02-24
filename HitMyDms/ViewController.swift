@@ -11,6 +11,7 @@ import Parse
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -60,10 +61,8 @@ class ViewController: UIViewController {
             }
         }
     }
-        
-    }
     
-func logInDidTap(_ sender: Any) {
+    @IBAction func loginDidTap(_ sender: Any) {
         let newUser = PFUser()
         
         // set user properties
@@ -106,17 +105,11 @@ func logInDidTap(_ sender: Any) {
                     
                 }
                 
-                
-                
-                
             } else {
                 print("User Registered successfully")
                 self.performSegue(withIdentifier: "logInSegue", sender: nil)
                 // manually segue to logged in view
             }
         }
+    }
 }
-        
-
-
-
