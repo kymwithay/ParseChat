@@ -1,0 +1,6 @@
+framework module Pods_HitMyDms {
+  umbrella header "Pods-HitMyDms-umbrella.h"
+
+  export *
+  module * { export * }
+}
