@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     @IBAction func signInDidTap(_ sender: Any) {
         PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!) { (user:PFUser?, error) in
             if user != nil {
-                print("you logged in")
-                self.performSegue(withIdentifier: "logInSegue", sender: nil)
+                print("You logged In")
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else if let error = error {
                 let errorMessage = error.localizedDescription
                 print(errorMessage)
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
                 
             } else {
                 print("User Registered successfully")
-                self.performSegue(withIdentifier: "logInSegue", sender: nil)
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 // manually segue to logged in view
             }
         }

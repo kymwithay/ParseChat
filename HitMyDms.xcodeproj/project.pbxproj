@@ -16,6 +16,8 @@
 		C83BF91B204206BB0036480A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83BF919204206BB0036480A /* LaunchScreen.storyboard */; };
 		C83BF926204206BB0036480A /* HitMyDmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BF925204206BB0036480A /* HitMyDmsTests.swift */; };
 		C83BF931204206BB0036480A /* HitMyDmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BF930204206BB0036480A /* HitMyDmsUITests.swift */; };
+		C86B728E204227390099669E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B728D204227390099669E /* ChatViewController.swift */; };
+		C86B729220422B930099669E /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B729120422B930099669E /* ChatCell.swift */; };
 		CCC71D5D930396FFFCF68840 /* Pods_HitMyDms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130457E21AC44D2CDE4FE55C /* Pods_HitMyDms.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		C83BF92C204206BB0036480A /* HitMyDmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HitMyDmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83BF930204206BB0036480A /* HitMyDmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitMyDmsUITests.swift; sourceTree = "<group>"; };
 		C83BF932204206BB0036480A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86B728D204227390099669E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C86B729120422B930099669E /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		D343FBCF09E90E36CD09F4D0 /* Pods-HitMyDmsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitMyDmsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HitMyDmsTests/Pods-HitMyDmsTests.release.xcconfig"; sourceTree = "<group>"; };
 		D98A8164756470F08FC9CAB1 /* Pods_HitMyDmsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HitMyDmsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB36CDFF8BB807D536BA1FDB /* Pods-HitMyDms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitMyDms.release.xcconfig"; path = "Pods/Target Support Files/Pods-HitMyDms/Pods-HitMyDms.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				C83BF917204206BB0036480A /* Assets.xcassets */,
 				C83BF919204206BB0036480A /* LaunchScreen.storyboard */,
 				C83BF91C204206BB0036480A /* Info.plist */,
+				C86B728D204227390099669E /* ChatViewController.swift */,
+				C86B729120422B930099669E /* ChatCell.swift */,
 			);
 			path = HitMyDms;
 			sourceTree = "<group>";
@@ -447,6 +453,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83BF913204206BB0036480A /* ViewController.swift in Sources */,
+				C86B728E204227390099669E /* ChatViewController.swift in Sources */,
+				C86B729220422B930099669E /* ChatCell.swift in Sources */,
 				C83BF911204206BB0036480A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
