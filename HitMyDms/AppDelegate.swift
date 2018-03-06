@@ -17,9 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
-                configuration.applicationId = "parseChat"
-                configuration.clientKey = "ouiyhngjgu76tf7fugh78j"  // set to nil assuming you have not set clientKey
-                configuration.server = "http://fierce-ocean-95885.herokuapp.com/parse"
+                configuration.applicationId = "CodePath-Parse"
+                configuration.server = "http://45.79.67.127:1337/parse"
             })
         )
         
