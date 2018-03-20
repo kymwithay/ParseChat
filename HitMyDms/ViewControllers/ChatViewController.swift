@@ -9,9 +9,11 @@
 import UIKit
 import Parse
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
+class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
    
+    @IBOutlet weak var chatMessageField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
     var Messages: [PFObject] = []
     
     override func viewDidLoad() {
@@ -19,9 +21,22 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
+
     }
 
+    @IBAction func sendButtonDidTap(_ sender: Any) {
+        let chatMessage = PFObject(className: "Message")
+        chatMessage["text"] = chatMessageField.text ?? ""
+        chatMessage.saveInBackground { (success, error) in
+            if success {
+                print("The message was saved!")
+            } else if let error = error {
+                print("Problem saving message: \(error.localizedDescription)")
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Messages.count
